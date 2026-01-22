@@ -3,74 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionHub | Shop Picks</title>
+    <title>Emma Lifestyle Hub | The Shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
         body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
         .font-serif { font-family: 'Bodoni Moda', serif; }
         .product-card { background: white; transition: all 0.4s; border-bottom: 2px solid transparent; }
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-bottom: 2px solid #E60023; }
-        .fa-pinterest { color: #E60023; transition: all 0.3s; }
-        .fa-instagram { color: #E4405F; transition: all 0.3s; }
-        .fa-facebook { color: #1877F2; transition: all 0.3s; }
-        .social-icon:hover { transform: scale(1.3); }
     </style>
 </head>
 <body>
     <nav class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b p-5 flex justify-between items-center px-6 md:px-24">
-        <a href="index.html" class="text-3xl font-serif font-bold tracking-tighter">Fashion<span class="text-[#E60023]">Hub</span></a>
+        <a href="index.html" class="text-3xl font-serif font-bold tracking-tighter">Emma<span class="text-[#E60023]">Hub</span></a>
         <div class="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400">
             <a href="index.html" class="hover:text-black transition">Home</a>
             <a href="shop.html" class="text-black border-b border-black pb-1">The Shop</a>
             <a href="connect.html" class="hover:text-black transition">Contact</a>
         </div>
         <div class="flex items-center">
-             <a href="https://pinterest.com" target="_blank" class="social-icon text-3xl"><i class="fab fa-pinterest"></i></a>
+             <a href="https://pinterest.com" target="_blank" class="social-icon text-3xl text-[#E60023]"><i class="fab fa-pinterest"></i></a>
         </div>
     </nav>
 
-    <main class="container mx-auto py-24 px-6">
-        <h2 class="text-5xl font-serif italic text-center mb-16">Shop Our Favorites</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <script>
-                const items = [
-                    {n: "Maxi Dress", p: "$40.00", img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500"},
-                    {n: "Jewelry Set", p: "$20.00", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500"},
-                    {n: "Summer Bag", p: "$55.00", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"},
-                    {n: "Heels", p: "$70.00", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500"},
-                    {n: "Scarf", p: "$15.00", img: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500"},
-                    {n: "Glasses", p: "$12.00", img: "https://images.unsplash.com/photo-1508296636986-f3928113ff42?w=500"},
-                    {n: "Watch", p: "$90.00", img: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500"},
-                    {n: "Earrings", p: "$10.00", img: "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=500"}
-                ];
-                document.write(items.map(i => `
-                    <div class="product-card group p-2">
-                        <img src="${i.img}" class="w-full h-64 object-cover">
-                        <div class="p-4 text-center">
-                            <h4 class="text-[10px] font-bold uppercase mb-2 font-sans">${i.n}</h4>
-                            <p class="text-[#E60023] font-bold mb-4">${i.p}</p>
-                            <a href="#" class="bg-black text-white px-4 py-2 text-[9px] uppercase font-bold block hover:bg-[#E60023] transition">Shop Now</a>
-                        </div>
-                    </div>
-                `).join(''));
-            </script>
+    <main class="container mx-auto py-16 px-6">
+        <h2 class="text-4xl font-serif italic text-center mb-4">Exclusive Digital Guides</h2>
+        <p class="text-center text-gray-500 mb-12 text-sm uppercase tracking-widest">Master Your Mindset & Health</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-4xl mx-auto">
+            <div class="product-card p-6 text-center border">
+                <img src="https://images.unsplash.com/photo-1506784919141-9336209b533a?w=500" class="w-full h-64 object-cover mb-4">
+                <h4 class="text-lg font-bold uppercase mb-2">Manifesting Mastery</h4>
+                <p class="text-gray-500 text-sm mb-4">Transform your life with expert mindset techniques.</p>
+                <a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="bg-black text-white px-6 py-3 text-xs uppercase font-bold block hover:bg-[#E60023] transition">Get Access Now</a>
+            </div>
+
+            <div class="product-card p-6 text-center border">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500" class="w-full h-64 object-cover mb-4">
+                <h4 class="text-lg font-bold uppercase mb-2">Ultimate Keto Guide</h4>
+                <p class="text-gray-500 text-sm mb-4">The secret to a healthier, glowing lifestyle.</p>
+                <a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="bg-black text-white px-6 py-3 text-xs uppercase font-bold block hover:bg-[#E60023] transition">Download Guide</a>
+            </div>
         </div>
+
+        <hr class="mb-24">
+
+        <h2 class="text-4xl font-serif italic text-center mb-16">Curated Fashion Picks</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="product-card p-2 opacity-60">
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="text-[10px] font-bold uppercase mb-2">Jewelry Set</h4>
+                    <p class="text-gray-400 text-[10px]">COMING SOON</p>
+                </div>
+            </div>
+            <div class="product-card p-2 opacity-60">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h4 class="text-[10px] font-bold uppercase mb-2">Summer Bag</h4>
+                    <p class="text-gray-400 text-[10px]">COMING SOON</p>
+                </div>
+            </div>
+            </div>
     </main>
 
-    <footer class="bg-white border-t pt-20 pb-12">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 text-center md:text-left">
-            <div><h4 class="text-2xl font-serif font-bold mb-8 tracking-tighter">FashionHub</h4><p class="text-gray-400 text-xs uppercase tracking-[0.2em] font-light">Global Curator for high-end fashion trends.</p></div>
-            <div class="flex flex-col space-y-5 text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600">
-                <a href="index.html">Home</a><a href="shop.html">The Shop</a><a href="connect.html">Contact</a>
+    <footer class="bg-white border-t pt-20 pb-12 text-center md:text-left">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20">
+            <div>
+                <h4 class="text-2xl font-serif font-bold mb-4">Emma Lifestyle Hub</h4>
+                <p class="text-gray-400 text-[10px] uppercase tracking-widest">Curating the best in digital & physical lifestyle trends.</p>
             </div>
-            <div><h5 class="text-[10px] font-bold uppercase tracking-[0.4em] mb-8">Follow Us</h5>
-                <div class="flex justify-center md:justify-start space-x-12 text-3xl">
-                    <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <div class="flex flex-col space-y-4 text-[10px] font-bold uppercase tracking-widest text-gray-600">
+                <a href="index.html">Home</a>
+                <a href="shop.html">The Shop</a>
+                <a href="connect.html">Contact</a>
+            </div>
+            <div>
+                <h5 class="text-[10px] font-bold uppercase tracking-widest mb-6">Socials</h5>
+                <div class="flex justify-center md:justify-start space-x-8 text-2xl">
+                    <a href="#"><i class="fab fa-pinterest text-[#E60023]"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-[#E4405F]"></i></a>
                 </div>
             </div>
         </div>
