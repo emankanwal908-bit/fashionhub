@@ -11,7 +11,9 @@
         body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
         .font-serif { font-family: 'Bodoni Moda', serif; }
         .product-card { background: white; transition: all 0.4s; border: 1px solid #f1f1f1; }
-        .product-card:hover { transform: translateY(-8px); border-bottom: 2px solid #E60023; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); border-bottom: 2px solid #E60023; }
+        .section-title { position: relative; display: inline-block; padding-bottom: 10px; }
+        .section-title::after { content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 50px; height: 2px; background: #E60023; }
     </style>
 </head>
 <body>
@@ -24,52 +26,101 @@
         </div>
     </nav>
 
-    <main class="container mx-auto py-24 px-6">
-        <h2 class="text-5xl font-serif italic text-center mb-16">The Collection</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            
+    <main class="container mx-auto py-20 px-6">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif italic section-title">Life-Changing Guides</h2>
+            <p class="text-gray-400 text-[10px] uppercase tracking-widest mt-4">Elevate your mindset and health</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-32">
             <div class="product-card p-2 text-center">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" class="w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" class="w-full h-72 object-cover">
                 <h4 class="text-[10px] font-bold uppercase mt-4">Manifesting Mastery</h4>
                 <p class="text-[#E60023] font-bold my-2">$27.00</p>
-                <a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="bg-black text-white px-4 py-2 text-[9px] uppercase font-bold block">Get Access</a>
+                <a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="bg-black text-white px-4 py-3 text-[9px] uppercase font-bold block hover:bg-[#E60023] transition">Get Access Now</a>
             </div>
 
             <div class="product-card p-2 text-center">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500" class="w-full h-64 object-cover">
+                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500" class="w-full h-72 object-cover">
                 <h4 class="text-[10px] font-bold uppercase mt-4">Ultimate Keto Guide</h4>
                 <p class="text-[#E60023] font-bold my-2">$19.00</p>
-                <a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="bg-black text-white px-4 py-2 text-[9px] uppercase font-bold block">Shop Now</a>
+                <a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="bg-black text-white px-4 py-3 text-[9px] uppercase font-bold block hover:bg-[#E60023] transition">Shop Now</a>
             </div>
 
             <div class="product-card p-2 text-center">
-                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=500" class="w-full h-64 object-cover">
-                <h4 class="text-[10px] font-bold uppercase mt-4">Independent Backyard</h4>
+                <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=500" class="w-full h-72 object-cover">
+                <h4 class="text-[10px] font-bold uppercase mt-4">Self-Reliance Guide</h4>
                 <p class="text-[#E60023] font-bold my-2">$37.00</p>
-                <a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="bg-black text-white px-4 py-2 text-[9px] uppercase font-bold block">Download</a>
+                <a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="bg-black text-white px-4 py-3 text-[9px] uppercase font-bold block hover:bg-[#E60023] transition">Download Now</a>
             </div>
+        </div>
 
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif italic section-title">Fashion Boutique</h2>
+            <p class="text-gray-400 text-[10px] uppercase tracking-widest mt-4">Curated Style & Trends</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <script>
-                const items = [
+                const fashionItems = [
                     {n: "Maxi Dress", p: "$40.00", img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500"},
                     {n: "Jewelry Set", p: "$20.00", img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500"},
                     {n: "Summer Bag", p: "$55.00", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"},
                     {n: "Heels", p: "$70.00", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500"},
                     {n: "Scarf", p: "$15.00", img: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500"},
-                    {n: "Glasses", p: "$12.00", img: "https://images.unsplash.com/photo-1508296636986-f3928113ff42?w=500"},
+                    {n: "Glasses", p: "$12.00", img: "https://www.babysparkles.pk/cdn/shop/files/FullSizeRender_8cec6ce5-c5e5-478d-941f-ee80ebb85686.jpg?v=1738172732&width=1445"},
                     {n: "Watch", p: "$90.00", img: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=500"},
                     {n: "Earrings", p: "$10.00", img: "https://images.unsplash.com/photo-1630019852942-f89202989a59?w=500"}
                 ];
-                document.write(items.map(i => `
+                document.write(fashionItems.map(i => `
                     <div class="product-card p-2 text-center">
                         <img src="${i.img}" class="w-full h-64 object-cover">
                         <h4 class="text-[10px] font-bold uppercase mt-4 font-sans">${i.n}</h4>
                         <p class="text-[#E60023] font-bold my-2">${i.p}</p>
-                        <a href="#" class="bg-gray-100 text-gray-400 px-4 py-2 text-[9px] uppercase font-bold block">Coming Soon</a>
+                        <a href="#" class="bg-gray-100 text-gray-400 px-4 py-2 text-[9px] uppercase font-bold block cursor-not-allowed">Coming Soon</a>
                     </div>
                 `).join(''));
             </script>
         </div>
     </main>
-</body>
+
+    <footer class="bg-white border-t pt-24 pb-12">
+        <div class="container mx-auto px-6 md:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
+                
+                <div>
+                    <h4 class="text-3xl font-serif font-bold tracking-tighter mb-6">Emma<span class="text-[#E60023]">Hub</span></h4>
+                    <p class="text-gray-400 text-xs leading-relaxed uppercase tracking-[0.2em]">
+                        Your global destination for luxury lifestyle, <br> 
+                        wellness guides, and curated fashion trends.
+                    </p>
+                </div>
+
+                <div class="flex flex-col space-y-4">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-black mb-4">Explore</h5>
+                    <a href="index.html" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-[#E60023] transition">Home</a>
+                    <a href="shop.html" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-[#E60023] transition">The Shop</a>
+                    <a href="connect.html" class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 hover:text-[#E60023] transition">Contact</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <h5 class="text-[10px] font-bold uppercase tracking-[0.4em] text-black mb-6">Join Our Community</h5>
+                    <div class="flex justify-center md:justify-end space-x-12">
+                        
+                        <a href="https://pin.it/6g20yqWpA" target="_blank" class="text-4xl text-[#E60023] hover:scale-110 transition duration-300">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+
+                       
+                    </div>
+                    <p class="mt-8 text-[9px] text-gray-400 uppercase tracking-widest font-bold">Follow for Daily Inspiration</p>
+                </div>
+            </div>
+
+            <div class="border-t pt-8 text-center">
+                <p class="text-gray-400 text-[9px] uppercase tracking-[0.5em]">© 2026 Emma Fashion Hub. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </html>
