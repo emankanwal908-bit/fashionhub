@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
         body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; }
         .font-serif { font-family: 'Bodoni Moda', serif; }
-        .hero-bg { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1490481651871-ab68624d5517?w=1600'); background-size: cover; background-position: center; }
+        .hero-bg { background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1600'); background-size: cover; background-position: center; }
         .nav-link { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.3em; color: #9ca3af; transition: all 0.3s; }
         .nav-link:hover { color: #000; }
         .btn-primary { background: #000; color: #fff; transition: all 0.3s; }
@@ -27,44 +27,76 @@
             <a href="connect.html" class="nav-link">Contact</a>
         </div>
         <div class="flex items-center">
-             <a href="https://pinterest.com" target="_blank" class="text-3xl text-[#E60023] hover:scale-125 transition"><i class="fab fa-pinterest"></i></a>
+             <a href="https://pin.it/6g20yqWpA" target="_blank" class="text-3xl text-[#E60023] hover:scale-125 transition"><i class="fab fa-pinterest"></i></a>
         </div>
     </nav>
 
-    <header class="hero-bg h-[70vh] flex flex-col justify-center items-center text-center px-6">
-        <h1 class="text-6xl md:text-8xl font-serif italic mb-6 animate__animated animate__fadeInDown">Elevate Your Life</h1>
-        <p class="text-gray-600 uppercase tracking-[0.5em] text-xs mb-10 animate__animated animate__fadeInUp">Fashion • Wellness • Mindset</p>
-        <a href="shop.html" class="btn-primary px-10 py-4 text-[10px] font-bold uppercase tracking-widest">Explore Collection</a>
+    <header class="hero-bg h-[60vh] flex flex-col justify-center items-center text-center px-6">
+        <h1 class="text-5xl md:text-7xl font-serif italic mb-6 animate__animated animate__fadeInDown">Elevate Your Life</h1>
+        <p class="text-gray-600 uppercase tracking-[0.5em] text-[10px] mb-10 animate__animated animate__fadeInUp">Fashion • Wellness • Mindset</p>
+        <a href="#trending" class="btn-primary px-10 py-4 text-[10px] font-bold uppercase tracking-widest">Explore Collection</a>
     </header>
 
-    <section class="py-24 px-6 text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl font-serif mb-6">Curated for the Modern Woman</h2>
-        <p class="text-gray-500 leading-relaxed font-light">Emma Fashion Hub is your global curator for high-end fashion trends and life-changing digital guides. From manifesting your dreams to glowing health, we bring you the best.</p>
-    </section>
+    <section id="trending" class="bg-white py-12 px-6">
+    <div class="container mx-auto">
+        <h3 class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 mb-16">Trending Fashion</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="../images/hoodie.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">White Zip Hoodie</h4>
+                <a href="https://s.click.aliexpress.com/e/_c3downBN" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="../images/pants.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">Cargo Pants</h4>
+                <a href="https://s.click.aliexpress.com/e/_c38BhM0T" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="../images/brook.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">Brooklyn Hoodie</h4>
+                <a href="https://s.click.aliexpress.com/e/_c4r9Z2bp" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="/images/shoes.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">Burgundy Shoes</h4>
+                <a href="https://s.click.aliexpress.com/e/_c3P0xFYr" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="/images/white.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">Grey Hoodie</h4>
+                <a href="https://s.click.aliexpress.com/e/_mqzTasv" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+
+            <div class="text-center group border p-4 rounded-lg bg-white shadow-sm">
+                <img src="/images/bag.jpeg" class="w-full h-64 object-cover mb-4 transition duration-500 group-hover:scale-105">
+                <h4 class="font-serif text-md mb-2">Aesthetic Bag</h4>
+                <a href="https://s.click.aliexpress.com/e/_c2wYGXth" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Shop Now</a>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
     <section class="bg-gray-50 py-24 px-6">
         <div class="container mx-auto">
-            <h3 class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 mb-16">Editor's Favorites</h3>
+            <h3 class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 mb-16">Lifestyle & Wellness Guides</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-6 border text-center group">
-                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500" class="w-full h-64 object-cover mb-4 group-hover:opacity-75 transition">
-                    <h4 class="font-serif text-lg mb-4">Mindset Mastery</h4>
-                    <a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a>
-                </div>
-                <div class="bg-white p-6 border text-center group">
-                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500" class="w-full h-64 object-cover mb-4 group-hover:opacity-75 transition">
-                    <h4 class="font-serif text-lg mb-4">Ultimate Keto</h4>
-                    <a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a>
-                </div>
-                <div class="bg-white p-6 border text-center group">
-                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=500" class="w-full h-64 object-cover mb-4 group-hover:opacity-75 transition">
-                    <h4 class="font-serif text-lg mb-4">Backyard Garden</h4>
-                    <a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a>
-                </div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Mindset Mastery</h4><a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Ultimate Keto</h4><a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Backyard Garden</h4><a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Medicinal Seed Kit</h4><a href="https://medicinalseedkit.com/kit/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1011110/pexels-photo-1011110.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">5-Minute Garden</h4><a href="http://www.betterdailyguide.site/ds24/5-minute-garden#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Home Decor</h4><a href="https://homedoctorbook.com/book/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
             </div>
         </div>
     </section>
-<footer class="bg-white border-t pt-24 pb-12">
+
+    <footer class="bg-white border-t pt-24 pb-12">
         <div class="container mx-auto px-6 md:px-24">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
                 
@@ -90,8 +122,6 @@
                         <a href="https://pin.it/6g20yqWpA" target="_blank" class="text-4xl text-[#E60023] hover:scale-110 transition duration-300">
                             <i class="fab fa-pinterest"></i>
                         </a>
-
-                        
                         
                     </div>
                     <p class="mt-8 text-[9px] text-gray-400 uppercase tracking-widest font-bold">Follow for Daily Inspiration</p>
@@ -103,6 +133,5 @@
             </div>
         </div>
     </footer>
-   
 </body>
 </html>
