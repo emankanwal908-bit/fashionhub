@@ -9,47 +9,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
-        
         body { font-family: 'Poppins', sans-serif; background-color: #fcfcfc; overflow-x: hidden; }
         .font-serif { font-family: 'Bodoni Moda', serif; }
-        
         .hero-bg { 
             background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1600'); 
-            background-size: cover; 
-            background-position: center; 
+            background-size: cover; background-position: center; 
         }
-
         .nav-link { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.2em; color: #9ca3af; transition: all 0.3s; }
         .nav-link:hover { color: #000; }
-        
         .btn-primary { background: #000; color: #fff; transition: all 0.3s; border: 1px solid #000; }
         .btn-primary:hover { background: #E60023; border-color: #E60023; transform: scale(1.05); }
+        
+        /* IMAGE STYLES */
+        .product-img { width: 100%; height: 240px; object-fit: cover; object-position: center; border-radius: 4px; }
+        @media (min-width: 768px) { .product-img { height: 380px; } }
 
-        /* FIXED PRODUCT IMAGES FOR ALL SCREENS */
-        .product-img {
-            width: 100%;
-            height: 240px; /* Mobile par standard height */
-            object-fit: cover; /* Image stretch nahi hogi, crop hogi */
-            object-position: center; /* Hamesha center focus rahega */
-            border-radius: 4px;
+        /* CARD HOVER EFFECT */
+        .product-card { 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            border: 1px solid #f3f4f6; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            background: white;
+        }
+        .product-card:hover { 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+            transform: translateY(-10px); 
         }
 
-        @media (min-width: 768px) {
-            .product-img {
-                height: 380px; /* Laptop par height */
-            }
-        }
-
-        .product-card {
+        /* BUTTON HOVER */
+        .shop-btn {
             transition: all 0.3s ease;
-            border: 1px solid #f3f4f6;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            color: black;
+            border-bottom: 1px solid black;
         }
-        .product-card:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
+        .product-card:hover .shop-btn {
+            color: #E60023;
+            border-color: #E60023;
+            letter-spacing: 0.1em;
         }
     </style>
 </head>
@@ -76,100 +74,47 @@
     <section id="trending" class="bg-white py-12 px-4 md:px-6">
         <div class="container mx-auto">
             <h3 class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 mb-12">Trending Fashion</h3>
-            
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
                 
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/hoodie.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">White Zip Hoodie</h4>
-                    <a href="https://s.click.aliexpress.com/e/_mqzTasv" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/brown-cargo-set.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Brown Cargo & Sweater Set</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/columbia-jacket.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Black Columbia Jacket</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/blue-white-sneakers.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Blue Contrast Sneakers</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/black-tote-bag.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Minimalist Black Tote Bag</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/platform-sneakers.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Navy Platform Sneakers</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/ribbed-sweaters.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">V-Neck Ribbed Sweater</h4><a href="#" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
 
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/pants.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Cargo Pants</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c4r9Z2bp" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/hoodie.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">White Zip Hoodie</h4><a href="https://s.click.aliexpress.com/e/_mqzTasv" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/pants.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Cargo Pants</h4><a href="https://s.click.aliexpress.com/e/_c4r9Z2bp" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/brook.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Brooklyn Hoodie</h4><a href="https://s.click.aliexpress.com/e/_c38BhM0T" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/shoes.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Burgundy Shoes</h4><a href="https://s.click.aliexpress.com/e/_c3P0xFYr" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/white.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Grey Hoodie</h4><a href="https://s.click.aliexpress.com/e/_c2wYGXth" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/bag.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Aesthetic Bag</h4><a href="https://s.click.aliexpress.com/e/_c3downBN" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/vintage.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Vintage Sneakers</h4><a href="https://s.click.aliexpress.com/e/_mL78m5j" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/uppar-woman.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Olive Sweater</h4><a href="https://s.click.aliexpress.com/e/_mL8nh0d" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/shirt.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Cream Polo</h4><a href="https://s.click.aliexpress.com/e/_c31vuAmn" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/brown-shirt.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Burgundy Jacket</h4><a href="https://s.click.aliexpress.com/e/_c3rTt3CJ" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/zipper.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Tactical Hoodie</h4><a href="https://s.click.aliexpress.com/e/_c41VIFjH" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
+                <div class="product-card text-center p-3 rounded-sm"><img src="images/brown-shoes.jpeg" class="product-img mb-4"><h4 class="font-serif text-sm md:text-md mb-2">Retro Sneakers</h4><a href="https://s.click.aliexpress.com/e/_c3WYRVFH" target="_blank" class="shop-btn text-[9px] font-bold pb-1 uppercase">Shop Now</a></div>
 
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/brook.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Brooklyn Hoodie</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c38BhM0T" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/shoes.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Burgundy Shoes</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c3P0xFYr" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/white.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Grey Hoodie</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c2wYGXth" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/bag.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Aesthetic Bag</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c3downBN" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/vintage.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Vintage Sneakers</h4>
-                    <a href="https://s.click.aliexpress.com/e/_mL78m5j" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/uppar-woman.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Olive Sweater</h4>
-                    <a href="https://s.click.aliexpress.com/e/_mL8nh0d" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/shirt.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Cream Polo</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c31vuAmn" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/brown-shirt.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Burgundy Jacket</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c3rTt3CJ" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/zipper.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Tactical Hoodie</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c41VIFjH" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-
-                <div class="product-card text-center p-3 rounded-sm bg-white">
-                    <img src="images/brown-shoes.jpeg" class="product-img mb-4">
-                    <h4 class="font-serif text-sm md:text-md mb-2">Retro Sneakers</h4>
-                    <a href="https://s.click.aliexpress.com/e/_c3WYRVFH" target="_blank" class="text-[9px] md:text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023] hover:border-[#E60023] uppercase">Shop Now</a>
-                </div>
-                
             </div>
         </div>
     </section>
 
-
-     <section class="bg-gray-50 py-24 px-6">
+    <section class="bg-gray-50 py-24 px-6">
         <div class="container mx-auto">
             <h3 class="text-center text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400 mb-16">Lifestyle & Wellness Guides</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Mindset Mastery</h4><a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Ultimate Keto</h4><a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Backyard Garden</h4><a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Medicinal Seed Kit</h4><a href="https://medicinalseedkit.com/kit/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1011110/pexels-photo-1011110.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">5-Minute Garden</h4><a href="http://www.betterdailyguide.site/ds24/5-minute-garden#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
-                <div class="bg-white p-6 border text-center group shadow-sm"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full h-64 object-cover mb-4 transition group-hover:opacity-75"><h4 class="font-serif text-lg mb-4">Home Decor</h4><a href="https://homedoctorbook.com/book/#aff=EmmaLifestyleHub" target="_blank" class="text-[10px] font-bold border-b border-black pb-1 hover:text-[#E60023]">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">Mindset Mastery</h4><a href="https://bottomlinemanifesting.com/#aff=EmmaLifestyleHub" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">Ultimate Keto</h4><a href="https://www.digistore24.com/redir/466293/EmmaLifestyleHub/" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">Backyard Garden</h4><a href="https://independentbackyard.com/my-book/#aff=EmmaLifestyleHub" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/4505171/pexels-photo-4505171.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">Medicinal Seed Kit</h4><a href="https://medicinalseedkit.com/kit/#aff=EmmaLifestyleHub" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/1011110/pexels-photo-1011110.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">5-Minute Garden</h4><a href="http://www.betterdailyguide.site/ds24/5-minute-garden#aff=EmmaLifestyleHub" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
+                <div class="product-card p-6 border text-center shadow-sm"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=600" class="product-img mb-4"><h4 class="font-serif text-lg mb-4">Home Decor</h4><a href="https://homedoctorbook.com/book/#aff=EmmaLifestyleHub" target="_blank" class="shop-btn text-[10px] font-bold pb-1">Get Guide</a></div>
             </div>
         </div>
     </section>
-    <footer class="bg-white border-t pt-24 pb-12">
+
+   <footer class="bg-white border-t pt-24 pb-12">
         <div class="container mx-auto px-6 md:px-24">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20 text-center md:text-left">
                 
